@@ -3,5 +3,3 @@ __pycache__/
 *$py.class
 .env
 service.json
-medication_db.json
-knowledge_base.json
