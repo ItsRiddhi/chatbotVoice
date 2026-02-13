@@ -1,0 +1,630 @@
+{
+    "intents": [
+        {
+            "tag": "emergency_cardiac",
+            "patterns": [
+                "chest pain",
+                "heart hurts",
+                "clutching chest",
+                "left arm pain",
+                "crushing weight on chest",
+                "heart attack",
+                "cardiac arrest"
+            ],
+            "responses": [
+                "I am detecting a possible heart emergency. I am calling 911 immediately. Please try to stay seated and calm."
+            ],
+            "priority": 100
+        },
+        {
+            "tag": "emergency_breathing",
+            "patterns": [
+                "can't breathe",
+                "short of breath",
+                "gasping",
+                "choking",
+                "turning blue",
+                "suffocating",
+                "air hunger",
+                "asthma attack"
+            ],
+            "responses": [
+                "I am alerting emergency services for breathing difficulty. Focus on slow exhales if you can."
+            ],
+            "priority": 100
+        },
+        {
+            "tag": "emergency_fall",
+            "patterns": [
+                "I fell",
+                "fallen down",
+                "can't get up",
+                "tripped and hurt",
+                "broken bone",
+                "bleeding heavily",
+                "on the floor"
+            ],
+            "responses": [
+                "Do not try to move if you are in pain. I am calling for help right now."
+            ],
+            "priority": 100
+        },
+        {
+            "tag": "emergency_stroke",
+            "patterns": [
+                "face drooping",
+                "arm weakness",
+                "slurred speech",
+                "can't raise arm",
+                "numbness on one side",
+                "stroke symptoms"
+            ],
+            "responses": [
+                "These could be signs of a stroke. I am contacting emergency services immediately. Time is critical."
+            ],
+            "priority": 100
+        },
+        {
+            "tag": "medication_general",
+            "patterns": [
+                "did i take my pills",
+                "medication status",
+                "meds check",
+                "have i taken my medicine",
+                "pill scheduler"
+            ],
+            "responses": [
+                "__DYNAMIC_MEDICATION_CHECK__"
+            ],
+            "priority": 90
+        },
+        {
+            "tag": "medication_pain",
+            "patterns": [
+                "start pain meds",
+                "take aspirin",
+                "need painkillers",
+                "tylenol",
+                "ibuprofen",
+                "hurt so bad"
+            ],
+            "responses": [
+                "Please check with your doctor's schedule before taking extra pain medication. Shall I log your pain level?"
+            ],
+            "priority": 80
+        },
+        {
+            "tag": "medication_insulin",
+            "patterns": [
+                "insulin",
+                "blood sugar",
+                "diabetes shot",
+                "glucose level",
+                "need to inject"
+            ],
+            "responses": [
+                "Have you checked your blood sugar levels recently? It is important to measure before injecting."
+            ],
+            "priority": 80
+        },
+        {
+            "tag": "pain_head",
+            "patterns": [
+                "headache",
+                "migraine",
+                "head throbbing",
+                "temples hurt",
+                "dizzy",
+                "seeing stars",
+                "light sensitivity"
+            ],
+            "responses": [
+                "Dim the lights and rest your eyes. Have you had enough water today?",
+                "If it is the worst headache of your life, tell me immediately."
+            ],
+            "priority": 50
+        },
+        {
+            "tag": "pain_joint",
+            "patterns": [
+                "knee pain",
+                "aching joints",
+                "arthritis flair",
+                "stiff fingers",
+                "hip hurts",
+                "back pain",
+                "lower back ache"
+            ],
+            "responses": [
+                "Gentle movement or a warm heating pad might help. Do not push yourself too hard today.",
+                "Is it a sharp pain or a dull ache?"
+            ],
+            "priority": 50
+        },
+        {
+            "tag": "pain_stomach",
+            "patterns": [
+                "stomach ache",
+                "belly hurts",
+                "indigestion",
+                "nausea",
+                "queasy",
+                "bloated",
+                "cramps"
+            ],
+            "responses": [
+                "Sip some water or ginger ale slowly. Avoid heavy foods for a few hours.",
+                "If the pain is severe or on the right side, let me know."
+            ],
+            "priority": 50
+        },
+        {
+            "tag": "pain_chest_minor",
+            "patterns": [
+                "heartburn",
+                "acid reflux",
+                "burned throat",
+                "spicy food"
+            ],
+            "responses": [
+                "It might be heartburn. Sitting upright usually helps more than lying down.",
+                "A glass of milk or an antacid might soothe it."
+            ],
+            "priority": 40
+        },
+        {
+            "tag": "symptom_cold",
+            "patterns": [
+                "sneezing",
+                "runny nose",
+                "stuffy nose",
+                "congested",
+                "coughing",
+                "sore throat",
+                "scratchy throat"
+            ],
+            "responses": [
+                "Rest and hydration are key. Warm tea with honey is excellent for a sore throat.",
+                "Make sure to wash your hands often to keep germs away."
+            ],
+            "priority": 40
+        },
+        {
+            "tag": "symptom_fever",
+            "patterns": [
+                "feeling hot",
+                "feverish",
+                "shivering",
+                "chills",
+                "temperature is high",
+                "sweating"
+            ],
+            "responses": [
+                "Let's monitor your temperature. Drink plenty of fluids to stay hydrated.",
+                "If your fever gets too high, we need to call the doctor."
+            ],
+            "priority": 45
+        },
+        {
+            "tag": "symptom_vision",
+            "patterns": [
+                "blurry vision",
+                "can't see well",
+                "double vision",
+                "floaters",
+                "eyes watering",
+                "dry eyes"
+            ],
+            "responses": [
+                "If vision changes are sudden, please tell me. Otherwise, maybe you need to rest your eyes?",
+                "Ensure your lighting is bright enough for reading."
+            ],
+            "priority": 45
+        },
+        {
+            "tag": "symptom_hearing",
+            "patterns": [
+                "ringing in ears",
+                "tinnitus",
+                "can't hear you",
+                "what did you say",
+                "hearing aid"
+            ],
+            "responses": [
+                "I can speak louder. Can you check your hearing aid battery?",
+                "Ringing in the ears can sometimes be related to blood pressure."
+            ],
+            "priority": 40
+        },
+        {
+            "tag": "symptom_skin",
+            "patterns": [
+                "itchy skin",
+                "rash",
+                "dry skin",
+                "bruise",
+                "cut myself",
+                "bleeding a little"
+            ],
+            "responses": [
+                "Clean any cuts with warm water and soap. Keep an eye on bruises.",
+                "Moisturizer is good for dry skin, especially on legs and arms."
+            ],
+            "priority": 40
+        },
+        {
+            "tag": "symptom_bathroom",
+            "patterns": [
+                "constipation",
+                "diarrhea",
+                "can't poop",
+                "runny tummy",
+                "bathroom trouble",
+                "incontinence"
+            ],
+            "responses": [
+                "Drinking warm water or prune juice often helps with constipation.",
+                "For diarrhea, it is crucial to drink water with electrolytes."
+            ],
+            "priority": 40
+        },
+        {
+            "tag": "symptom_sleep",
+            "patterns": [
+                "insomnia",
+                "can't sleep",
+                "waking up early",
+                "nightmares",
+                "restless legs",
+                "snoring"
+            ],
+            "responses": [
+                "Establishing a calm bedtime routine helps. Avoid TV before bed.",
+                "Maybe a warm bath would help relax your muscles?"
+            ],
+            "priority": 40
+        },
+        {
+            "tag": "mental_confusion",
+            "patterns": [
+                "where am I",
+                "what year is it",
+                "who are you",
+                "I am lost",
+                "foggy brain"
+            ],
+            "responses": [
+                "You are safe at home. I am your medical companion.",
+                "It is okay to feel a bit foggy. Let's take a deep breath together."
+            ],
+            "priority": 60
+        },
+        {
+            "tag": "mental_anxiety",
+            "patterns": [
+                "worried",
+                "scared",
+                "nervous",
+                "anxious",
+                "panic",
+                "heart racing"
+            ],
+            "responses": [
+                "You are safe. Breathe in... hold... and breathe out.",
+                "Focus on my voice. We are just sitting here calmly."
+            ],
+            "priority": 60
+        },
+        {
+            "tag": "mental_depression",
+            "patterns": [
+                "sad",
+                "hopeless",
+                "crying",
+                "don't want to get up",
+                "what's the point",
+                "grief"
+            ],
+            "responses": [
+                "I am here to listen. You matter very much.",
+                "It is okay to have sad days. We can just sit quietly if you prefer."
+            ],
+            "priority": 60
+        },
+        {
+            "tag": "mental_lonely",
+            "patterns": [
+                "lonely",
+                "no one visits",
+                "isolated",
+                "miss my kids",
+                "alone"
+            ],
+            "responses": [
+                "I am here with you. I enjoy our chats.",
+                "Would you like to try calling a family member?",
+                "Tell me a story about your childhood. I'd love to hear it."
+            ],
+            "priority": 50
+        },
+        {
+            "tag": "daily_food",
+            "patterns": [
+                "what should I eat",
+                "hungry",
+                "dinner ideas",
+                "breakfast",
+                "lunch",
+                "snack"
+            ],
+            "responses": [
+                "How about something light like soup or toast?",
+                "Make sure to include some protein and vegetables.",
+                "Have you had a piece of fruit today?"
+            ],
+            "priority": 30
+        },
+        {
+            "tag": "daily_hydration",
+            "patterns": [
+                "thirsty",
+                "drink water",
+                "dehydrated",
+                "dry mouth"
+            ],
+            "responses": [
+                "Sip water consistently throughout the day.",
+                "Tea and juice also count, but water is best."
+            ],
+            "priority": 30
+        },
+        {
+            "tag": "daily_hygiene",
+            "patterns": [
+                "shower",
+                "bath",
+                "brush teeth",
+                "wash face",
+                "get dressed"
+            ],
+            "responses": [
+                "Taking a warm bath can be very relaxing.",
+                "Be careful on wet floors. Use the grab bars."
+            ],
+            "priority": 30
+        },
+        {
+            "tag": "daily_exercise",
+            "patterns": [
+                "exercise",
+                "walk",
+                "stretch",
+                "workout",
+                "yoga",
+                "keep fit"
+            ],
+            "responses": [
+                "Even a 10-minute walk is great for your heart.",
+                "Have you done your chair stretches today?",
+                "Movement helps keep joints lubricated."
+            ],
+            "priority": 30
+        },
+        {
+            "tag": "tech_tv",
+            "patterns": [
+                "remote control",
+                "tv won't work",
+                "change channel",
+                "volume"
+            ],
+            "responses": [
+                "Check if the batteries in the remote need changing.",
+                "Sometimes the input button needs to be pressed."
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "tech_phone",
+            "patterns": [
+                "call my son",
+                "phone not working",
+                "battery low",
+                "charger"
+            ],
+            "responses": [
+                "Is your phone plugged in to charge?",
+                "I can't make calls myself, but I can remind you to use your phone."
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "weather_check",
+            "patterns": [
+                "is it raining",
+                "weather forecast",
+                "umbrella",
+                "snowing",
+                "cold outside"
+            ],
+            "responses": [
+                "I can't see outside, but it's always good to be prepared.",
+                "Check the window. If it looks gray, bring a jacket."
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "time_check",
+            "patterns": [
+                "what time is it",
+                "what day is it",
+                "is it morning",
+                "is it night"
+            ],
+            "responses": [
+                "I don't have an internal clock, but there should be one nearby.",
+                "Time for a tea break, perhaps?"
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "conversation_history",
+            "patterns": [
+                "remember the war",
+                "back in my day",
+                "1950s",
+                "my youth",
+                "when I was young"
+            ],
+            "responses": [
+                "I love hearing about history. correct tell me more.",
+                "Things were very different then, weren't they?",
+                "What is your fondest memory from that time?"
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "conversation_hobby",
+            "patterns": [
+                "knitting",
+                "fishing",
+                "reading",
+                "gardening",
+                "golf",
+                "cooking"
+            ],
+            "responses": [
+                "Hobbies keep the mind sharp.",
+                "What are you working on currently?",
+                "That sounds like a wonderful way to relax."
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "conversation_family",
+            "patterns": [
+                "my grandson",
+                "my daughter",
+                "my wife",
+                "my husband",
+                "passed away",
+                "wedding"
+            ],
+            "responses": [
+                "Family memories are stubborn treasures.",
+                "They sound like wonderful people.",
+                "I am sorry for your loss, if they are no longer with us."
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "conversation_joke",
+            "patterns": [
+                "tell me a joke",
+                "make me laugh",
+                "funny story",
+                "humor"
+            ],
+            "responses": [
+                "What do you call a boomerang that won't come back? A stick.",
+                "Why did the bicycle fall over? Because it was two-tired!",
+                "What does a nosey pepper do? Get jalapeño business!",
+                "I used to play piano by ear, but now I use my hands."
+            ],
+            "priority": 20
+        },
+        {
+            "tag": "smalltalk_greeting",
+            "patterns": [
+                "hello",
+                "hi",
+                "good morning",
+                "good evening",
+                "hey"
+            ],
+            "responses": [
+                "Hello! How are you feeling today?",
+                "Good day to you.",
+                "Hi! I am here and listening."
+            ],
+            "priority": 10
+        },
+        {
+            "tag": "smalltalk_farewell",
+            "patterns": [
+                "bye",
+                "goodbye",
+                "see you later",
+                "goodnight"
+            ],
+            "responses": [
+                "Goodbye. Stay safe.",
+                "Sleep well.",
+                "I will be here when you wake up."
+            ],
+            "priority": 10
+        },
+        {
+            "tag": "smalltalk_thanks",
+            "patterns": [
+                "thank you",
+                "thanks",
+                "appreciate it"
+            ],
+            "responses": [
+                "You are most welcome.",
+                "Happy to help.",
+                "No problem at all."
+            ],
+            "priority": 10
+        },
+        {
+            "tag": "bot_identity",
+            "patterns": [
+                "who are you",
+                "are you real",
+                "what is your name",
+                "robot"
+            ],
+            "responses": [
+                "I am your digital medical companion.",
+                "I am a computer program designed to help you.",
+                "I do not have a name, but you can call me whatever you like."
+            ],
+            "priority": 10
+        },
+        {
+            "tag": "confirmation",
+            "patterns": [
+                "yes",
+                "correct",
+                "right",
+                "yeah",
+                "okay",
+                "sure"
+            ],
+            "responses": [
+                "Okay.",
+                "Understood.",
+                "noted."
+            ],
+            "priority": 5
+        },
+        {
+            "tag": "negation",
+            "patterns": [
+                "no",
+                "incorrect",
+                "wrong",
+                "nope",
+                "never"
+            ],
+            "responses": [
+                "I see.",
+                "My mistake.",
+                "Okay, let's try again."
+            ],
+            "priority": 5
+        }
+    ]
+}
